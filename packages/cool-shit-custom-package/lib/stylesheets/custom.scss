@@ -14,3 +14,58 @@
 .posts-new-button.btn.btn-primary{
   // background-color: red;
 }
+
+@font-face { font-family: HighTide; src: url('/fonts/hightide/HighTide.otf'); } 
+@font-face { font-family: HighTideSans; src: url('/fonts/hightide/HighTideSans.otf'); } 
+@font-face { font-family: HighTideBold; src: url('/fonts/hightide/HighTideBold.otf'); } 
+
+body{
+  background: ghostwhite;
+}
+
+footer.love {
+  background-color: #1f2329;
+  padding: 10px 20px;
+  text-align: right;
+}
+
+footer.love p{
+  margin: 0px;
+  color: ghostwhite;
+}
+
+footer.love .fa-heart{
+    color: #bd1260;
+}
+
+.love a{
+  cursor: url(../img/poop_pin.png), auto;
+}
+
+
+/**************************  SVG ****************************************/
+
+.header-wrapper{ background-color: inherit; }
+
+// svg.header{
+//   padding: 5em 1em;
+//   /*height: 60%;*/
+//   width: 100%;
+//   /*border: 1px solid black;*/ /*debugging purposes*/
+// }
+
+svg.header text{
+  font-family: "HighTide", "Times New Roman"; 
+  font-size: 5em;
+}
+
+svg.header{
+  padding: 1em 1em
+}
+
+svg.header text{
+  font-size: 3em;
+}
+
+
+/******************************************************************/
