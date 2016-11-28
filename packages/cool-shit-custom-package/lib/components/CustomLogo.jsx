@@ -9,8 +9,7 @@ import { IndexLink } from 'react-router';
 
 const CustomLogo = ({logoUrl, siteTitle}) => {
   return (
-	<div>
-		<div>
+    <div id="logo">
 			<svg 
 				className="header" 
 				xmlns="http://www.w3.org/2000/svg"
@@ -36,37 +35,24 @@ const CustomLogo = ({logoUrl, siteTitle}) => {
 				</text>
 				
 				<defs>
-					<linearGradient 
-						id="skyGradient" 
-						x1="100%" 
-						y1="100%">
-						<stop 
-							offset="0%" 
-							stopColor="lightblue" 
-							stopOpacity=".5">
-							
-							<animate 
-								attributeName="stopColor" 
-								values="rgba(173,216,230,0.2);
-										rgba(0,0,255,0.2);
-										rgba(255,0,0,0.2);
-										rgba(255,0,0,0.2);
-										rgba(0,0,0,0.2);
-										rgba(255,0,0,0.2);
-										rgba(255,0,0,0.2);
-										rgba(128,0,128,0.2);
-										rgba(173,216,230,0.2);" 
-								dur="20s" 
-								repeatCount="indefinite"/>
+					<linearGradient id="skyGradient" x1="100%" y1="100%">
+						<stop offset="0%" stopColor="rgba(173,216,230,0.2)" stopOpacity="0.5">
+							<animate attributeName="stop-color" 
+							values="rgba(173,216,230,0.2);
+									rgba(0,0,255,0.2);
+									rgba(255,0,0,0.2);
+									rgba(255,0,0,0.2);
+									rgba(0,0,0,0.2);
+									rgba(255,0,0,0.2);
+									rgba(255,0,0,0.2);
+									rgba(128,0,128,0.2);
+									rgba(173,216,230,0.2);" 
+							dur="20s" 
+							repeatCount="indefinite" />
 						</stop>
-						<stop 
-							offset="100%" 
-							stopColor="lightblue" 
-							stopOpacity=".5">
-
-							<animate 
-								attributeName="stopColor" 
-								values="rgba(173,216,230,0.2);
+						<stop offset="100%" stopColor="rgba(173,216,230,0.2)" stopOpacity="0.5">
+							<animate attributeName="stop-color" 
+							values="rgba(173,216,230,0.2);
 									rgba(255,165,0,0.2);
 									rgba(128,0,128,0.2);
 									rgba(128,0,128,0.2);
@@ -75,21 +61,18 @@ const CustomLogo = ({logoUrl, siteTitle}) => {
 									rgba(128,0,128,0.2);
 									rgba(0,0,255,0.2);
 									rgba(173,216,230,0.2);" 
-								dur="20s" 
-								repeatCount="indefinite"/>
-
-							<animate 
-								attributeName="offset" 
+							dur="20s" 
+							repeatCount="indefinite" />
+							
+							<animate attributeName="offset" 
 								values=".95;.80;.60;.40;.20;0;.20;.40;.60;.80;.95" 
 								dur="20s" 
-								repeatCount="indefinite"/>
-
+								repeatCount="indefinite" />
 						</stop>
 					</linearGradient>
 				</defs>
 			</svg>
 		</div>
-	</div>
   )
 }
 
