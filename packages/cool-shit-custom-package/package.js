@@ -1,5 +1,5 @@
 Package.describe({
-  name: "my-custom-package"
+  name: "cool-shit-custom-package"
 });
 
 Package.onUse( function(api) {
