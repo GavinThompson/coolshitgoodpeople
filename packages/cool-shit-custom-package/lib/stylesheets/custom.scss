@@ -1,19 +1,51 @@
+/************************** Preexisting Style Overrides ****************************************/
+
 .post-red{
-  background-color: #FFD3D2;
+  background-color: #555;
 }
 .post-blue{
-  background-color: #D2F5FF;
+  background-color: #555;
 }
 .post-yellow{
-  background-color: #FBFFD2;
+  background-color: #555;
 }
 .post-green{
-  background-color: #D2FFD2;
+  background-color: #555;
 }
 
 .posts-new-button.btn.btn-primary{
   // background-color: red;
 }
+
+.btn-primary{
+	background-color: #66CCFF;
+	color: ghostwhite;
+	// border-color: #FF69B4
+	border-color: rgba(255,105,180, 0.7);
+}
+
+.btn-secondary,
+.upvote-button,
+input.form-control,
+textarea.form-control,
+input,
+select.form-control,
+.checkbox input,
+.modal-content,
+.newsletter{
+	border: 1px solid #66CCFF;
+	border-radius: 8px;
+}
+
+.newsletter{
+	background: rgba(255,255,255, 0.6);
+	width: 80%;
+	margin: 0px auto;
+	margin-bottom: 15px;
+}
+
+/************************** General Additions ****************************************/
+
 
 @font-face { font-family: HighTide; src: url('/fonts/hightide/HighTide.otf'); } 
 @font-face { font-family: HighTideSans; src: url('/fonts/hightide/HighTideSans.otf'); } 
@@ -23,6 +55,7 @@ body{
   background: ghostwhite;
 }
 
+/************************** FOOTER ****************************************/
 footer.love {
   background-color: #1f2329;
   padding: 10px 20px;
@@ -43,16 +76,32 @@ footer.love .fa-heart{
 }
 
 
+/************************** HEADER BG ****************************************/
+
+.header-wrapper{ 
+	// margin-bottom: 0px;
+	// padding-bottom: 0px;
+
+	// background-color: inherit; 
+	background: rgba(102,204,255,1);
+	background: -moz-linear-gradient(top, rgba(102,204,255,1) 0%, rgba(248,248,255,1) 48%, rgba(248,248,255,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(102,204,255,1)), color-stop(48%, rgba(248,248,255,1)), color-stop(100%, rgba(248,248,255,1)));
+	background: -webkit-linear-gradient(top, rgba(102,204,255,1) 0%, rgba(248,248,255,1) 48%, rgba(248,248,255,1) 100%);
+	background: -o-linear-gradient(top, rgba(102,204,255,1) 0%, rgba(248,248,255,1) 48%, rgba(248,248,255,1) 100%);
+	background: -ms-linear-gradient(top, rgba(102,204,255,1) 0%, rgba(248,248,255,1) 48%, rgba(248,248,255,1) 100%);
+	background: linear-gradient(to bottom, rgba(102,204,255,1) 0%, rgba(248,248,255,1) 48%, rgba(248,248,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66ccff', endColorstr='#f8f8ff', GradientType=0 );
+}
+
 /**************************  SVG ****************************************/
 
-.header-wrapper{ background-color: inherit; }
 
-// svg.header{
+svg.header{
 //   padding: 5em 1em;
-//   /*height: 60%;*/
+  height: 105px;
 //   width: 100%;
 //   /*border: 1px solid black;*/ /*debugging purposes*/
-// }
+}
 
 svg.header text{
   font-family: "HighTide", "Times New Roman"; 
@@ -68,10 +117,4 @@ svg.header text{
 }
 
 
-/******************************************************************/
-
-// Bootstrap overrides
-.btn-secondary{
-	border-color: salmon;
-}
 

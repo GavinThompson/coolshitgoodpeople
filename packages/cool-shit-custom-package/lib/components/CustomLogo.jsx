@@ -23,7 +23,7 @@ const CustomLogo = ({logoUrl, siteTitle}) => {
 				Shifting gradient logo/header for Cool Shit Good People
 			</desc>
 
-				<text x="0" y="40" dy="0"
+				<text x="0" y="0" dy="0"
 					style={{fill:"url(#skyGradient)"}}>
 					<tspan x="0" dy=".6em">
 						COOL SHIT
@@ -38,29 +38,29 @@ const CustomLogo = ({logoUrl, siteTitle}) => {
 					<linearGradient id="skyGradient" x1="100%" y1="100%">
 						<stop offset="0%" stopColor="rgba(173,216,230,0.2)" stopOpacity="0.5">
 							<animate attributeName="stop-color" 
-							values="rgba(173,216,230,0.2);
-									rgba(0,0,255,0.2);
-									rgba(255,0,0,0.2);
-									rgba(255,0,0,0.2);
-									rgba(0,0,0,0.2);
-									rgba(255,0,0,0.2);
-									rgba(255,0,0,0.2);
-									rgba(128,0,128,0.2);
-									rgba(173,216,230,0.2);" 
+							values="rgba(173,216,230,0.4);
+									rgba(0,0,255,0.4);
+									rgba(255,0,0,0.4);
+									rgba(255,0,0,0.4);
+									rgba(0,0,0,0.4);
+									rgba(255,0,0,0.4);
+									rgba(255,0,0,0.4);
+									rgba(128,0,128,0.4);
+									rgba(173,216,230,0.4);" 
 							dur="20s" 
 							repeatCount="indefinite" />
 						</stop>
-						<stop offset="100%" stopColor="rgba(173,216,230,0.2)" stopOpacity="0.5">
+						<stop offset="100%" stopColor="rgba(173,216,230,0.4)" stopOpacity="0.5">
 							<animate attributeName="stop-color" 
-							values="rgba(173,216,230,0.2);
-									rgba(255,165,0,0.2);
-									rgba(128,0,128,0.2);
-									rgba(128,0,128,0.2);
-									rgba(0,0,0,0.2);
-									rgba(128,0,128,0.2);
-									rgba(128,0,128,0.2);
-									rgba(0,0,255,0.2);
-									rgba(173,216,230,0.2);" 
+							values="rgba(173,216,230,0.4);
+									rgba(255,165,0,0.4);
+									rgba(128,0,128,0.4);
+									rgba(128,0,128,0.4);
+									rgba(0,0,0,0.4);
+									rgba(128,0,128,0.4);
+									rgba(128,0,128,0.4);
+									rgba(0,0,255,0.4);
+									rgba(173,216,230,0.4);" 
 							dur="20s" 
 							repeatCount="indefinite" />
 							
