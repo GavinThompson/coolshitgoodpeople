@@ -58,21 +58,32 @@ select.form-control,
 
 /*********************************** NAV OVERRIDES ************************************/
 
-.nav{
-	display: flex;
-	align-items: center;
-	position: absolute;
-	top: 30px;
-	right: 20px;
+// nav sidebar
+.sidebar-navigation .mdl-navigation__link .material-icons {
+    font-size: 24px;
+    margin-right: 32px;
 }
 
-@media screen and (max-width: 600px){
-	.nav{
-		position: initial;
-		top: initial;
-		right: initial;
-	}
+.sidebar-navigation .mdl-navigation__link {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.56);
+  font-weight: 500;
 }
+
+.sidebar-navigation .mdl-navigation__link.mdl-js-ripple-effect { 
+	position: relative; 
+}
+
+
+.sidebar-navigation .mdl-navigation__link .material-icons {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.56);
+  margin-right: 32px;
+}
+
+
 
 
 /******************************** General Additions ****************************************/
@@ -82,8 +93,8 @@ select.form-control,
 @font-face { font-family: HighTideSans; src: url('/fonts/hightide/HighTideSans.otf'); } 
 @font-face { font-family: HighTideBold; src: url('/fonts/hightide/HighTideBold.otf'); } 
 
-body{
-  background: white;
+body, .sidebar-navigation a{
+  font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 
 /************************** FOOTER ****************************************/
