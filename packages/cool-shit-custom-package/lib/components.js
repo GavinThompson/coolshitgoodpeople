@@ -10,8 +10,12 @@ import CustomPostsItem from "./components/CustomPostsItem.jsx";
 
 // Added
 import CustomFooter from "./components/CustomFooter.jsx";
+import CustomHeader from "./components/CustomHeader.jsx";
+
 
 Telescope.components.Logo = CustomLogo;
 Telescope.components.Newsletter = CustomNewsletter;
 Telescope.components.PostsItem = CustomPostsItem;
 Telescope.components.Footer = CustomFooter;
+
+Telescope.components.Header = CustomHeader;
