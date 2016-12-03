@@ -83,6 +83,21 @@ select.form-control,
   margin-right: 32px;
 }
 
+// search and new post button
+.mdl-layout__header .header-search{
+	right: 80px;
+}
+
+.mdl-layout__header .header-search .mdl-textfield__label:after{
+	background-color: rgb(255,64,129); // accent colour
+}
+
+.mdl-layout__header .new-post-button{
+	position: absolute;
+	right: 40px;
+	top: 36px;
+	z-index: 999;
+}
 
 
 

@@ -17,14 +17,22 @@ const CustomHeader = (props, {currentUser}) => {
 		<header className="mdl-layout__header">
 			<div className="mdl-layout__header-row">
 				<div className="mdl-layout-spacer"></div>
-				<div className="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+
+				<div className="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right header-search">
 					<label className="mdl-button mdl-js-button mdl-button--icon" htmlFor="fixed-header-drawer-exp">
 						<i className="material-icons">search</i>
 					</label>
 					<div className="mdl-textfield__expandable-holder">
 						<input className="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp"/>
+						<label className="mdl-textfield__label" htmlFor="search-expandable"></label>
 					</div>
 				</div>
+
+				<button className="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent new-post-button">
+					<i className="material-icons" role="presentation">add</i>
+					<span className="visuallyhidden">Add</span>
+				</button>
+
 			</div>
 		</header>
 		<div className="mdl-layout__drawer">
