@@ -36,31 +36,31 @@ const CustomLogo = ({logoUrl, siteTitle}) => {
 				
 				<defs>
 					<linearGradient id="skyGradient" x1="100%" y1="100%">
-						<stop offset="0%" stopColor="rgba(173,216,230,0.2)" stopOpacity="0.5">
+						<stop offset="0%" stopColor="rgba(0,0,255,0.9)" stopOpacity="0.5">
 							<animate attributeName="stop-color" 
-							values="rgba(173,216,230,0.4);
-									rgba(0,0,255,0.4);
-									rgba(255,0,0,0.4);
-									rgba(255,0,0,0.4);
-									rgba(0,0,0,0.4);
-									rgba(255,0,0,0.4);
-									rgba(255,0,0,0.4);
-									rgba(128,0,128,0.4);
-									rgba(173,216,230,0.4);" 
+							values="rgba(173,216,230,0.9);
+									rgba(0,0,255,0.9);
+									rgba(255,0,0,0.9);
+									rgba(255,0,0,0.9);
+									rgba(0,0,0,0.9);
+									rgba(255,0,0,0.9);
+									rgba(255,0,0,0.9);
+									rgba(128,0,128,0.9);
+									rgba(173,216,230,0.9);" 
 							dur="20s" 
 							repeatCount="indefinite" />
 						</stop>
-						<stop offset="100%" stopColor="rgba(173,216,230,0.4)" stopOpacity="0.5">
+						<stop offset="100%" stopColor="rgba(255,165,0,0.9)" stopOpacity="0.5">
 							<animate attributeName="stop-color" 
-							values="rgba(173,216,230,0.4);
-									rgba(255,165,0,0.4);
-									rgba(128,0,128,0.4);
-									rgba(128,0,128,0.4);
-									rgba(0,0,0,0.4);
-									rgba(128,0,128,0.4);
-									rgba(128,0,128,0.4);
-									rgba(0,0,255,0.4);
-									rgba(173,216,230,0.4);" 
+							values="rgba(173,216,230,0.9);
+									rgba(255,165,0,0.9);
+									rgba(128,0,128,0.9);
+									rgba(128,0,128,0.9);
+									rgba(0,0,0,0.9);
+									rgba(128,0,128,0.9);
+									rgba(128,0,128,0.9);
+									rgba(0,0,255,0.9);
+									rgba(173,216,230,0.9);" 
 							dur="20s" 
 							repeatCount="indefinite" />
 							
