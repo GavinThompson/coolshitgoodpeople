@@ -4,7 +4,7 @@ import Telescope from 'meteor/nova:lib';
 import React from 'react';
 //import { Messages } from "meteor/nova:core";
 
-const Header = (props, {currentUser}) => {
+const CustomHeader = (props, {currentUser}) => {
   
   const logoUrl = Telescope.settings.get("logoUrl");
   const siteTitle = Telescope.settings.get("title", "Nova");
@@ -13,70 +13,43 @@ const Header = (props, {currentUser}) => {
   return (
 
 	
-	<div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-	  <header className="mdl-layout__header">
-		<div className="mdl-layout__header-row">
+	<div className="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+		<header className="mdl-layout__header">
+			<div className="mdl-layout__header-row">
+				<div className="mdl-layout-spacer"></div>
+				<div className="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+					<label className="mdl-button mdl-js-button mdl-button--icon" htmlFor="fixed-header-drawer-exp">
+						<i className="material-icons">search</i>
+					</label>
+					<div className="mdl-textfield__expandable-holder">
+						<input className="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp"/>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div className="mdl-layout__drawer">
 			<span className="mdl-layout-title">
 				<Telescope.components.Logo logoUrl={logoUrl} siteTitle={siteTitle} />
 			</span>
+			<nav className="mdl-navigation">
+				<a className="mdl-navigation__link" href="">Link</a>
+				<a className="mdl-navigation__link" href="">Link</a>
+				<a className="mdl-navigation__link" href="">Link</a>
+				<a className="mdl-navigation__link" href="">Link</a>
+			</nav>
 		</div>
-		<div className="mdl-layout__tab-bar mdl-js-ripple-effect">
-			<a href="#scroll-tab-1" className="mdl-layout__tab is-active">Tab 1</a>
-			<a href="#scroll-tab-2" className="mdl-layout__tab">Tab 2</a>
-			<a href="#scroll-tab-3" className="mdl-layout__tab">Tab 3</a>
-			<a href="#scroll-tab-4" className="mdl-layout__tab">Tab 4</a>
-			<a href="#scroll-tab-5" className="mdl-layout__tab">Tab 5</a>
-			<a href="#scroll-tab-6" className="mdl-layout__tab">Tab 6</a>
-		</div>
-	  </header>
-	  <div className="mdl-layout__drawer">
-		<span className="mdl-layout-title">
-			<Telescope.components.Logo logoUrl={logoUrl} siteTitle={siteTitle} />
-		</span>
-	  </div>
-	  <main className="mdl-layout__content">
-		<section className="mdl-layout__tab-panel is-active" id="scroll-tab-1">
-			<div className="page-content">
-				Test
-			</div>
-		</section>
-		<section className="mdl-layout__tab-panel" id="scroll-tab-2">
-			<div className="page-content">
-				Test
-			</div>
-		</section>
-		<section className="mdl-layout__tab-panel" id="scroll-tab-3">
-			<div className="page-content">
-				Test
-			</div>
-		</section>
-		<section className="mdl-layout__tab-panel" id="scroll-tab-4">
-			<div className="page-content">
-				Test
-			</div>
-		</section>
-		<section className="mdl-layout__tab-panel" id="scroll-tab-5">
-			<div className="page-content">
-				Test
-			</div>
-		</section>
-		<section className="mdl-layout__tab-panel" id="scroll-tab-6">
-			<div className="page-content">
-				Test
-			</div>
-		</section>
-	  </main>
 	</div>
+
   )
 }
 
-Header.displayName = "Header";
+CustomHeader.displayName = "Header";
 
-Header.contextTypes = {
+CustomHeader.contextTypes = {
   currentUser: React.PropTypes.object,
 };
 
-module.exports = Header;
+module.exports = CustomHeader;
 
 
 
