@@ -21,6 +21,7 @@ class CustomPostsItem extends Telescope.components.PostsItem {
     if (post.color) {
       postClass += " post-"+post.color;
     }
+    postClass += " mdl-card mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-shadow--4dp"
     // ⭐ custom code ends here ⭐
 
     return (
@@ -35,6 +36,7 @@ class CustomPostsItem extends Telescope.components.PostsItem {
         <div className="posts-item-content">
           
           <h3 className="posts-item-title">
+            DERP 
             <Link to={Posts.getLink(post)} className="posts-item-title-link" target={Posts.getLinkTarget(post)}>
               {post.title}
             </Link>

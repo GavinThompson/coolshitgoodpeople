@@ -11,20 +11,23 @@ class CustomLayout extends Component {
 
         <Telescope.components.HeadTags />
 
+        <Telescope.components.Loading />
+
         <Telescope.components.UsersProfileCheck {...this.props} />
 
         <Telescope.components.Header {...this.props}/>
+
       
         <main className="mdl-layout__content">
           <FlashContainer component={Telescope.components.FlashMessages}/>
 
           <Telescope.components.Newsletter />
-          <div className="page-content">
+          <div className="mdl-grid">
             {this.props.children}
           </div>
         </main>
       
-        <Telescope.components.Footer {...this.props}/>
+        <Telescope.components.Footer {...this.props} />
       
       </div>
     )
