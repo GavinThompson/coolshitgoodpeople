@@ -11,7 +11,6 @@ class CustomLayout extends Component {
 
         <Telescope.components.HeadTags />
 
-        <Telescope.components.Loading />
 
         <Telescope.components.UsersProfileCheck {...this.props} />
 
