@@ -7,9 +7,14 @@ import Users from 'meteor/nova:users';
 
 const CustomSidebarPostsViews = (props, context) => {
 
-  let views = ["top", "new", "best"];
+  let views = [{name:"top", icon: "loyalty"},
+               {name:"new", icon: "grade"},
+               {name:"best", icon: "pets"}];
+
+
   const adminViews = ["pending", "rejected", "scheduled"];
-  
+
+
   if (Users.canDo(context.currentUser, "posts.edit.all")) {
     views = views.concat(adminViews);
   }
@@ -21,17 +26,17 @@ const CustomSidebarPostsViews = (props, context) => {
 
         {views.map(view => 
 
-          <LinkContainer key={view} to={{pathname: "/", query: {...query, view: view}}} /*to={}*/>
+          <LinkContainer key={view.name} to={{pathname: "/", query: {...query, view: view.name}}} /*to={}*/>
             <Button className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect">
-              <i className="mdl-color-text--cyan-500 material-icons" role="presentation">home</i>
-              <FormattedMessage id={"posts."+view}/>
+              <i className="mdl-color-text--cyan-500 material-icons" role="presentation">{view.icon}</i>
+              <FormattedMessage id={"posts."+view.name}/>
             </Button>
           </LinkContainer>
         )}
 
         <LinkContainer to={"/daily"} /*to={{name: "posts.daily"}}*/>
           <Button className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect">
-            <i className="mdl-color-text--cyan-500 material-icons" role="presentation">home</i>
+            <i className="mdl-color-text--cyan-500 material-icons" role="presentation">alarm</i>
             <FormattedMessage id="posts.daily"/>
           </Button>
         </LinkContainer>
