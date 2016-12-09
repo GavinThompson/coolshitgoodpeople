@@ -4,13 +4,17 @@ import { FlashContainer } from "meteor/nova:core";
 
 class CustomLayout extends Component {
 
+  componentDidMount() {
+    //
+    // set el height and width etc.
+  }
+
   render() {
 
     return (
       <div className="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
 
         <Telescope.components.HeadTags />
-
 
         <Telescope.components.UsersProfileCheck {...this.props} />
 

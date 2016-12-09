@@ -7,8 +7,7 @@ import React from 'react';
 const CustomHeader = (props, {currentUser}) => {
   
   const logoUrl = Telescope.settings.get("logoUrl");
-  const siteTitle = Telescope.settings.get("title", "Nova");
-  const tagline = Telescope.settings.get("tagline");
+  const siteTitle = Telescope.settings.get("title", "Cool Shit, Good People");
 
   return (
 
@@ -33,11 +32,11 @@ const CustomHeader = (props, {currentUser}) => {
 				<Telescope.components.Logo logoUrl={logoUrl} siteTitle={siteTitle} />
 			</span>
 			<nav className="sidebar-navigation mdl-navigation">
-				<a className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" href=""><i className="mdl-color-text--cyan-500 material-icons" role="presentation">home</i>Home</a>
-				<a className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" href=""><i className="mdl-color-text--cyan-500 material-icons" role="presentation">inbox</i>Inbox</a>
-				<a className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" href=""><i className="mdl-color-text--cyan-500 material-icons" role="presentation">delete</i>Trash</a>
-				<a className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" href=""><i className="mdl-color-text--cyan-500 material-icons" role="presentation">report</i>Spam</a>
-				<a className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" href=""><i className="mdl-color-text--cyan-500 material-icons" role="presentation">forum</i>Forums</a>
+				<Telescope.components.SidebarPostsViews />
+				<a className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" href=""><i className="mdl-color-text--cyan-500 material-icons" role="presentation">home</i>Top*</a>
+				<a className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" href=""><i className="mdl-color-text--cyan-500 material-icons" role="presentation">inbox</i>New*</a>
+				<a className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" href=""><i className="mdl-color-text--cyan-500 material-icons" role="presentation">delete</i>Best*</a>
+				<a className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" href=""><i className="mdl-color-text--cyan-500 material-icons" role="presentation">report</i>Daily*</a>
 				<a className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" href=""><i className="mdl-color-text--cyan-500 material-icons" role="presentation">home</i>Home</a>
 				<a className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" href=""><i className="mdl-color-text--cyan-500 material-icons" role="presentation">inbox</i>Inbox</a>
 				<a className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" href=""><i className="mdl-color-text--cyan-500 material-icons" role="presentation">delete</i>Trash</a>

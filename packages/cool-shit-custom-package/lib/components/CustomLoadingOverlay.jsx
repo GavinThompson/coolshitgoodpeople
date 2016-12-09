@@ -1,20 +1,20 @@
 import React, { PropTypes, Component } from 'react';
 
-const CustomSiteLoading = ({color}) => {
+const CustomLoadingOverlay = ({color}) => {
   return (
-    <div id="app.loading" className="loading-overlay">
+    <div className="loading-overlay" id="appLoad">
       <div className="center">
-        <Telescope.components.Loading />
+        <div className="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
       </div>
     </div>
   )
 }
 
-CustomSiteLoading.propTypes = {
+CustomLoadingOverlay.propTypes = {
   color: React.PropTypes.string
 }
 
-CustomSiteLoading.displayName = "Loading";
+CustomLoadingOverlay.displayName = "Loading";
 
-module.exports = CustomSiteLoading;
-export default CustomSiteLoading;
+module.exports = CustomLoadingOverlay;
+export default CustomLoadingOverlay;
