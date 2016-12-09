@@ -22,18 +22,18 @@ const CustomSidebarPostsViews = (props, context) => {
         {views.map(view => 
 
           <LinkContainer key={view} to={{pathname: "/", query: {...query, view: view}}} /*to={}*/>
-            <a className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect">
+            <Button className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect">
               <i className="mdl-color-text--cyan-500 material-icons" role="presentation">home</i>
               <FormattedMessage id={"posts."+view}/>
-            </a>
+            </Button>
           </LinkContainer>
         )}
 
         <LinkContainer to={"/daily"} /*to={{name: "posts.daily"}}*/>
-          <a className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect">
+          <Button className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect">
             <i className="mdl-color-text--cyan-500 material-icons" role="presentation">home</i>
             <FormattedMessage id="posts.daily"/>
-          </a>
+          </Button>
         </LinkContainer>
 
     </div>
