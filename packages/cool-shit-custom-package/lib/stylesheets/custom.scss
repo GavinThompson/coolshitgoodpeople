@@ -83,8 +83,10 @@ main .posts-list{
 	top: 49%;
 }
 
-.loading-overlay .mdl-progress{
+.loading-overlay .center .mdl-progress{
+	position:relative;
 	margin: 0px auto;
+	z-index: 9999;
 }
 
 /*********************************** NAV OVERRIDES ************************************/

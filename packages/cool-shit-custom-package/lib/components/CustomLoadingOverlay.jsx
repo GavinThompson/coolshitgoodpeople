@@ -1,4 +1,4 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
 
 const CustomLoadingOverlay = ({color}) => {
   return (
@@ -10,9 +10,6 @@ const CustomLoadingOverlay = ({color}) => {
   )
 }
 
-CustomLoadingOverlay.propTypes = {
-  color: React.PropTypes.string
-}
 
 CustomLoadingOverlay.displayName = "Loading";
 

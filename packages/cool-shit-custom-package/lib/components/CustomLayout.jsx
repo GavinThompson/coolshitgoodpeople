@@ -4,15 +4,30 @@ import { FlashContainer } from "meteor/nova:core";
 
 class CustomLayout extends Component {
 
+
+
+  constructor () {
+    super()
+    this.state = {
+      initLoading: true
+    }
+  }
+
   componentDidMount() {
     //
     // set el height and width etc.
+      {this.setState({ initLoading: false })}
+
+    
   }
+
 
   render() {
 
     return (
       <div className="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+
+        {this.state.initLoading ? <Telescope.components.LoadingOverlay /> : null}
 
         <Telescope.components.HeadTags />
 
@@ -31,6 +46,7 @@ class CustomLayout extends Component {
         </main>
       
         <Telescope.components.Footer {...this.props} />
+
       
       </div>
     )

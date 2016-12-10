@@ -1,4 +1,4 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
 
 const CustomLoading = ({color}) => {
   return (
@@ -6,10 +6,6 @@ const CustomLoading = ({color}) => {
       <div className="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
     </div>
   )
-}
-
-CustomLoading.propTypes = {
-  color: React.PropTypes.string
 }
 
 CustomLoading.displayName = "Loading";
