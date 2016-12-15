@@ -2,18 +2,18 @@
 
 /************************** Preexisting Style Overrides ****************************************/
 
-.post-red{
-  background-color: #555;
-}
-.post-blue{
-  background-color: #555;
-}
-.post-yellow{
-  background-color: #555;
-}
-.post-green{
-  background-color: #555;
-}
+// .post-red{
+//   background-color: #555;
+// }
+// .post-blue{
+//   background-color: #555;
+// }
+// .post-yellow{
+//   background-color: #555;
+// }
+// .post-green{
+//   background-color: #555;
+// }
 
 
 .btn-primary{
@@ -31,7 +31,7 @@ input,
 select.form-control,
 .checkbox input,
 .modal-content,
-.posts-item,
+// .post-item,
 .newsletter{
 	border: 1px solid #66CCFF;
 	border-radius: 8px;
@@ -52,6 +52,20 @@ select.form-control,
 	// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66ccff', endColorstr='#f8f8ff', GradientType=0 );
 }
 
+
+
+/******************************** General Additions ****************************************/
+
+
+@font-face { font-family: HighTide; src: url('/fonts/hightide/HighTide.otf'); } 
+@font-face { font-family: HighTideSans; src: url('/fonts/hightide/HighTideSans.otf'); } 
+@font-face { font-family: HighTideBold; src: url('/fonts/hightide/HighTideBold.otf'); } 
+
+body, .sidebar-navigation a{
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+
 /*********************************** NEW MDL OVERRIDES ************************************/
 
 main .mdl-grid{
@@ -62,9 +76,6 @@ main .posts-list{
 	width: 100%;
 }
 
-.mdl-card.mdl-cell.posts-item{
-	margin: 15px auto;
-}
 
 /*********************************** LOADER OVERRIDES ************************************/
 
@@ -147,18 +158,6 @@ main .posts-list{
 }
 
 
-
-/******************************** General Additions ****************************************/
-
-
-@font-face { font-family: HighTide; src: url('/fonts/hightide/HighTide.otf'); } 
-@font-face { font-family: HighTideSans; src: url('/fonts/hightide/HighTideSans.otf'); } 
-@font-face { font-family: HighTideBold; src: url('/fonts/hightide/HighTideBold.otf'); } 
-
-body, .sidebar-navigation a{
-  font-family: 'Roboto', 'Helvetica', sans-serif;
-}
-
 /************************** FOOTER ****************************************/
 footer.love {
   background-color: #1f2329;
@@ -179,6 +178,7 @@ footer.love .fa-heart{
   cursor: url(../img/poop_pin.png), auto;
 }
 
+/************************** HEADER LOGO SVG ****************************************/
 
 svg.header{
   padding-top: 0.6em;
@@ -191,6 +191,172 @@ svg.header text{
   font-size: 1.3em;
 }
 
+/************************** POSTS MAIN LIST ****************************************/
 
+.posts-list{
+	margin: 0 auto;
+}
+
+.posts-list .header-buffer{
+  height: 74px; // directly correspondts with the height of the header bar
+}
+
+@media screen and (max-width: 1024px){
+  .posts-list .header-buffer {
+    height: 66px; // directly correspondts with the height of the header bar
+ 
+  }
+}
+.posts-list .mdl-cell{
+	margin: 0 auto;
+}
+
+.posts-list .demo-text{
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+// inspired by google design events page https://design.google.com/events/
+
+.list-view{
+	display:table;
+	width:100%;
+	margin:0
+}
+@media only screen and (min-width:793px){
+	.list-view{
+		padding:64px 0 128px
+	}
+}
+
+@media only screen and (max-width:792px){
+	.list-view{
+		padding:32px 16px 64px
+	}
+}
+@media only screen and (max-width:360px){
+	.list-view{
+		padding:32px 0 64px
+	}
+}
+
+.list-view.-compact{
+	padding:0
+}
+
+.posts-list .post-item{
+	display:table-row;
+	// display:block;
+}
+
+.post-wrap{
+	display:block;
+}
+
+.posts-list .post-header{
+	vertical-align:top;
+	display:table-cell;
+}
+@media only screen and (max-width:360px){
+	.post-header{
+		display:none;
+	}
+}
+
+.post-header ._bubble{
+	width:72px;
+	height:72px;
+	border-radius:35px;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position:center
+}
+
+@media only screen and (min-width:793px){
+	.post-header ._bubble{
+		margin-top:20px;
+		margin-right:32px
+	}
+
+	.post-header{
+		padding-top:16px
+	}
+	.post-header ._bubble{
+		margin-top:14px;
+		margin-right:16px;
+		width:56px;
+		height:56px
+	}
+}
+
+.post-detail{
+	font-weight:400;
+	font-size:14px;
+	line-height:1.8;
+	width:100%;
+	padding:25px 0 39px;
+	display:table-cell
+}
+
+.post-detail p{
+	margin:0
+}
+
+.post-detail ._title-block{
+	font-weight:400;
+	position:relative;
+	padding-right:15px
+}
+
+.post-detail ._title-block ._title{
+	display:block;
+	font-weight:400;
+	font-size:24px;
+	line-height:1.3333333333;
+	margin:0 0 .4em
+}
+
+@media only screen and (max-width:792px){
+	.post-detail ._title-block{
+		padding-right:40px
+	}
+	.post-detail ._title-block ._title{
+		font-size:18px;
+		line-height:1.3333333333
+	}
+}
+
+.post-detail ._arrow{
+	position:absolute;
+	right:0;
+	top:.5em;
+}
+.post-detail ._left-icon{
+	position:absolute;
+	left:0;
+	top:0;
+}
+.post-detail ._meta{
+	color:#757575
+}
+.post-detail ._source{
+	color:#4caf50
+}
+
+@media only screen and (min-width:793px){
+	.post-detail ._date+._location:before{
+		content:'|';
+		padding-right:4px
+	}
+}
+@media only screen and (max-width:792px){
+	.post-detail ._meta span{
+		display:block
+	}
+	.post-detail ._meta span:after{
+		content:''
+	}
+}
 
 
