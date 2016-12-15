@@ -1,4 +1,5 @@
-// @import '{zodiase:mdl}/theme';
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono');
+@import '{zodiase:mdl}/theme';
 
 /************************** Preexisting Style Overrides ****************************************/
 
@@ -226,28 +227,33 @@ svg.header text{
 }
 @media only screen and (min-width:793px){
 	.list-view{
-		padding:64px 0 128px
+		// padding:64px 0 128px
+		padding: 0px;
 	}
 }
 
 @media only screen and (max-width:792px){
 	.list-view{
-		padding:32px 16px 64px
+		// padding:32px 16px 64px
+		padding: 0px;
 	}
 }
 @media only screen and (max-width:360px){
 	.list-view{
-		padding:32px 0 64px
+		// padding:32px 0 64px
+		padding: 0px;
 	}
 }
 
 .list-view.-compact{
-	padding:0
+	// padding:0
+	padding: 0px;
 }
 
 .posts-list .post-item{
 	display:table-row;
 	// display:block;
+	font-family: Roboto, Helvetica, sans-serif;
 }
 
 .post-wrap{
@@ -263,6 +269,8 @@ svg.header text{
 		display:none;
 	}
 }
+
+
 
 .post-header ._bubble{
 	width:72px;
@@ -296,17 +304,17 @@ svg.header text{
 	line-height:1.8;
 	width:100%;
 	padding:25px 0 39px;
-	display:table-cell
+	display:table-cell;
 }
 
 .post-detail p{
-	margin:0
+	margin:0;
 }
 
 .post-detail ._title-block{
 	font-weight:400;
 	position:relative;
-	padding-right:15px
+	padding-right:15px;
 }
 
 .post-detail ._title-block ._title{
@@ -314,7 +322,16 @@ svg.header text{
 	font-weight:400;
 	font-size:24px;
 	line-height:1.3333333333;
-	margin:0 0 .4em
+	margin:0 0 .4em;
+	font-family:"Roboto Mono",Roboto,sans-serif;
+	a{
+		color: rgba( 0,0,0,0.7);
+		text-decoration: none;
+	}
+	a:hover{
+		color:rgb(255,64,129);
+		transition:125ms color ease-in
+	}
 }
 
 @media only screen and (max-width:792px){
@@ -358,5 +375,32 @@ svg.header text{
 		content:''
 	}
 }
+
+._arrow,
+._arrow .svg-icon{
+	line-height:1
+}
+._arrow{
+	display:block;
+	font-size:.7em
+}
+
+.svg-icon{
+	opacity:.54;
+	transition:.2s all cubic-bezier(.4,0,.2,1);
+	fill:currentColor;
+	height:1em;
+	width:1em
+}
+.svg-icon:focus,
+.svg-icon:hover{
+	opacity:1
+}
+.tile-chevron-right,
+.tile-ext-link{
+	width:24px;
+	height:24px
+}
+
 
 

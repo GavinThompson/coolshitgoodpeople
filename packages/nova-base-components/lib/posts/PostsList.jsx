@@ -7,7 +7,7 @@ const PostsList = ({results, currentUser, hasMore, ready, count, totalCount, loa
     return (
       <div className="posts-list">
         {showHeader ? <Telescope.components.PostsListHeader /> : null}
-        <div className="mdl-cell mdl-cell--10-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+        <div className="mdl-cell mdl-cell--9-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
 
           <ol className="list-view">
             {results.map(post => <Telescope.components.PostsItem post={post} key={post._id}/>)}

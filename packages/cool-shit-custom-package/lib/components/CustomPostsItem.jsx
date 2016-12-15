@@ -50,7 +50,7 @@ class CustomPostsItem extends Telescope.components.PostsItem {
                   {post.title}
                   <span className="_arrow">
                     <svg className="svg-icon tile-chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                      <path className="_fill-color" opacity="1" fill="#000000" d="M9 4L7.6 5.4l6.6 6.6-6.6 6.6L9 20l8-8"></path>
+                      <path opacity="1" d="M9 4L7.6 5.4l6.6 6.6-6.6 6.6L9 20l8-8"></path>
                     </svg>
                   </span>
                 </Link>
