@@ -25,7 +25,7 @@ nova:rss
 ############ Customizable Packages ############
 
 nova:base-components
-nova:base-styles
+# nova:base-styles
 nova:base-routes
 nova:email-templates
 nova:i18n-en-us
@@ -42,3 +42,4 @@ nova:debug
 ############ Your Packages ############
 
 cool-shit-custom-package
+zodiase:mdl
