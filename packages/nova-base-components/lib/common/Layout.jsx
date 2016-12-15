@@ -23,10 +23,10 @@ class Layout extends Component {
 
           {this.props.children}
 
+          <Telescope.components.Footer {...this.props}/>
+
         </div>
-      
-        <Telescope.components.Footer {...this.props}/>
-      
+            
       </div>
     )
 

@@ -36,7 +36,7 @@ class CustomPostsItem extends Telescope.components.PostsItem {
         <div className="post-wrap -has-border -event-list -is-link">
           <div className="post-header">
             <Link to={Posts.getLink(post)} target={Posts.getLinkTarget(post)}>
-              <div className="_bubble" style={inlineBubbleStyle}>
+              <div className="_bubble mdl-shadow--4dp " style={inlineBubbleStyle}>
               </div>
             </Link>
           </div>

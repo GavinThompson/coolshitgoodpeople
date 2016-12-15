@@ -290,13 +290,20 @@ svg.header text{
 	.post-header{
 		padding-top:16px
 	}
+}
+@media only screen and (max-width:793px){
 	.post-header ._bubble{
 		margin-top:14px;
 		margin-right:16px;
 		width:56px;
 		height:56px
 	}
+	.post-header{
+		padding-top:10px
+	}
 }
+
+
 
 .post-detail{
 	font-weight:400;
@@ -305,6 +312,7 @@ svg.header text{
 	width:100%;
 	padding:25px 0 39px;
 	display:table-cell;
+	border-bottom:1px solid #e9e9e9;
 }
 
 .post-detail p{
@@ -401,6 +409,4 @@ svg.header text{
 	width:24px;
 	height:24px
 }
-
-
 
