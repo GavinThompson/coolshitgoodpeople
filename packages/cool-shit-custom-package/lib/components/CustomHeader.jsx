@@ -21,10 +21,8 @@ const CustomHeader = (props, {currentUser}) => {
 				<Telescope.components.SearchForm />
 
 
-				<button className="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--6dp mdl-color--accent new-post-button">
-					<i className="material-icons" role="presentation">add</i>
-					<span className="visuallyhidden">Add</span>
-				</button>
+				<Telescope.components.PostsNewButton/>
+
 
 			</div>
 		</header>

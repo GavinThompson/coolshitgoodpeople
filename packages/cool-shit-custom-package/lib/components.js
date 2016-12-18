@@ -11,6 +11,7 @@ import Telescope from 'meteor/nova:lib';
 import CustomLayout from "./components/CustomLayout.jsx";
 import CustomHeader from "./components/CustomHeader.jsx";
 import CustomLogo from "./components/CustomLogo.jsx";
+import CustomPostsNewButton from "./components/CustomPostsNewButton.jsx";
 import CustomSearchForm from "./components/CustomSearchForm.jsx";
 import CustomSidebarPostsViews from "./components/CustomSidebarPostsViews.jsx";
 
@@ -36,6 +37,7 @@ Telescope.components.Layout = CustomLayout;
 
 Telescope.components.Header = CustomHeader;
 Telescope.components.Logo = CustomLogo;
+Telescope.components.PostsNewButton = CustomPostsNewButton;
 Telescope.components.SidebarPostsViews = CustomSidebarPostsViews;
 Telescope.components.SearchForm = CustomSearchForm;
 
