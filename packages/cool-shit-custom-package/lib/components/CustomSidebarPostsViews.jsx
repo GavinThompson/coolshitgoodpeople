@@ -12,7 +12,9 @@ const CustomSidebarPostsViews = (props, context) => {
                {name:"best", icon: "pets"}];
 
 
-  const adminViews = ["pending", "rejected", "scheduled"];
+  const adminViews = [{name:"pending", icon: "loyalty"},
+               {name:"rejected", icon: "grade"},
+               {name:"scheduled", icon: "pets"}];
 
 
   if (Users.canDo(context.currentUser, "posts.edit.all")) {

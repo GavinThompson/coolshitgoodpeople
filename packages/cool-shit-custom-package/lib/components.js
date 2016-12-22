@@ -28,7 +28,6 @@ import CustomFooter from "./components/CustomFooter.jsx";
 
 
 
-
 Telescope.components.LoadingOverlay = CustomLoadingOverlay;
 Telescope.components.Loading = CustomLoading;
 Telescope.components.AppLoading = CustomAppLoading;
