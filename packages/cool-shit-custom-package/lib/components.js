@@ -22,6 +22,7 @@ import CustomPostsListHeader from "./components/CustomPostsListHeader.jsx";
 
 import CustomPostsItem from "./components/CustomPostsItem.jsx";
 
+
 import CustomFooter from "./components/CustomFooter.jsx";
 
 
@@ -48,6 +49,7 @@ Telescope.components.PostsListHeader = CustomPostsListHeader;
 
 
 Telescope.components.PostsItem = CustomPostsItem;
+
 
 Telescope.components.Footer = CustomFooter;
 
