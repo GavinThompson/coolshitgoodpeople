@@ -3,7 +3,6 @@ This file centralizes all our custom component overrides.
 */
 
 import CustomLoadingOverlay from "./components/CustomLoadingOverlay.jsx";
-import CustomLoading from "./components/CustomLoading.jsx";
 import CustomAppLoading from "./components/CustomAppLoading.jsx";
 
 import Telescope from 'meteor/nova:lib';
@@ -30,7 +29,6 @@ import CustomFooter from "./components/CustomFooter.jsx";
 
 
 Telescope.components.LoadingOverlay = CustomLoadingOverlay;
-Telescope.components.Loading = CustomLoading;
 Telescope.components.AppLoading = CustomAppLoading;
 Telescope.components.Layout = CustomLayout;
 
