@@ -24,8 +24,8 @@ const CustomSidebarPostsViews = (props, context) => {
   const query = _.clone(props.router.location.query);
 
   return (
-    <div className="sidebar-posts-views">
-
+    <div className="sidebar-posts-views" id="sidebar-views">
+    
         {views.map(view => 
 
           <LinkContainer key={view.name} to={{pathname: "/", query: {...query, view: view.name}}} /*to={}*/>
@@ -65,29 +65,17 @@ CustomSidebarPostsViews.displayName = "SidebarPostsViews";
 
 module.exports = withRouter(CustomSidebarPostsViews);
 
-
-// <div className="posts-views">
-//   <DropdownButton 
-//     bsStyle="default" 
-//     className="views btn-secondary" 
-//     title={context.intl.formatMessage({id: "posts.view"})} 
-//     id="views-dropdown"
-//   >
-//     {views.map(view => 
-//       <LinkContainer key={view} to={{pathname: "/", query: {...query, view: view}}} /*to={}*/ className="dropdown-item">
-//         <MenuItem>
-//           <FormattedMessage id={"posts."+view}/>
-//         </MenuItem>
-//       </LinkContainer>
-//     )}
-//     <LinkContainer to={"/daily"} /*to={{name: "posts.daily"}}*/ className="dropdown-item">
-//       <MenuItem className={"bar"}>
-//         <FormattedMessage id="posts.daily"/>
-//       </MenuItem>
-//     </LinkContainer>
-//   </DropdownButton>
-// </div>
-				// <a className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" href=""><i className="mdl-color-text--cyan-500 material-icons" role="presentation">home</i>Top*</a>
-				// <a className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" href=""><i className="mdl-color-text--cyan-500 material-icons" role="presentation">inbox</i>New*</a>
-				// <a className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" href=""><i className="mdl-color-text--cyan-500 material-icons" role="presentation">delete</i>Best*</a>
-				// <a className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" href=""><i className="mdl-color-text--cyan-500 material-icons" role="presentation">report</i>Daily*</a>
+// possible implementation of disappearing shadow after DropdownButtonfor (i = 0; i < xxx.length; i++) { 
+//    var link = xxx[i];
+//    console.log( link.className );
+//         var newClassName = "";
+//         var cl;
+//         var classes = link.className.split(" ");
+//         for(cl = 0; cl < classes.length; cl++) {
+//           if(classes[cl] !== "mdl-shadow--2dp") {
+//               newClassName += classes[cl] + " ";
+//           }
+//         }
+//         link.className = newClassName;
+  
+// }

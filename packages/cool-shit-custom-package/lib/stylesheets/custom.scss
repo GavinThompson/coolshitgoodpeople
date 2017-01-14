@@ -71,8 +71,8 @@ main .posts-list{
 	background-color: white !important;
 }
 
-.mdl-layout__drawer .mdl-navigation.sidebar-navigation{
-	padding-top: 0px;
+.mdl-layout__drawer .mdl-navigation.sidebar-navigation {
+    padding-top: 24px;
 }
 
 .mdl-layout__drawer .mdl-navigation.sidebar-navigation hr{
@@ -81,10 +81,21 @@ main .posts-list{
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0,188,212, 0.75), rgba(0, 0, 0, 0)); //rgba(0,188,212, 0.75) primary with opacity; rgb(255,64,129) accent colour with opacity
 }
 
-.sidebar-navigation .mdl-navigation__link .material-icons {
-    font-size: 24px;
-    margin-right: 32px;
+.sidebar-navigation .sidebar-posts-views{
+  position: relative;
+  top: -56px;
+  background-color: white;
+  opacity: 0.0;
+  display: none;
 }
+
+.sidebar-navigation .sidebar-posts-views.show-sort-by-list{
+  opacity: 1.0;
+  transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  -webkit-transition: opacity .3s ease-in-out;
+}
+
 
 .sidebar-navigation .mdl-navigation__link {
   display: flex !important;
@@ -93,6 +104,24 @@ main .posts-list{
   color: rgba(255, 255, 255, 0.56);
   font-weight: 500;
 }
+
+.sidebar-navigation .sidebar-posts-views .mdl-navigation__link {
+  opacity: 0;
+}
+
+
+.sidebar-navigation .sidebar-posts-views.show-sort-by-list .mdl-navigation__link.fade-in{
+  opacity: 1;
+  transition: opacity .3s ease-in-out;
+  -moz-transition: opacity .3s ease-in-out;
+  -webkit-transition: opacity .3s ease-in-out;
+}
+
+.sidebar-navigation .mdl-navigation__link .material-icons{
+    font-size: 24px;
+    margin-right: 32px;
+}
+
 
 .sidebar-navigation .mdl-navigation__link.mdl-js-ripple-effect { 
 	position: relative; 
@@ -121,12 +150,35 @@ main .posts-list{
 	z-index: 999;
 }
 
+.sidebar-navigation .sidebar-card.mdl-card{
+	position: relative; //using this for animation transitions
+	margin: 12px auto;
+	height: 340px;
+	width: 220px;
+}
+
+
+.sidebar-navigation .sidebar-card.mdl-card.animate-up{
+    transform: translate(0,-56px);
+    -webkit-transform: translate(0,-56px);
+    -o-transform: translate(0,-56px); 
+    -moz-transform: translate(0,-56px);
+
+    -webkit-transition: all 0.3s ease-out;
+       -moz-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+         -o-transition: all 0.3s ease-out;
+            transition: all 0.3s ease-out;
+}
+
 
 /************************** FOOTER ****************************************/
 footer.love {
   background-color: #1f2329;
   padding: 10px 20px;
   text-align: right;
+  position: relative;
+  bottom: 0;
 }
 
 footer.love p{
@@ -139,7 +191,7 @@ footer.love .fa-heart{
 }
 
 .love a{
-  cursor: url(../img/poop_pin.png), auto;
+  cursor: url(/img/poop_pin.png), auto;
 }
 
 /************************** HEADER LOGO SVG ****************************************/
