@@ -11,34 +11,43 @@ const CustomHeader = (props, {currentUser}) => {
 
   var sortByClicked = false
 
-  var sortByAnimation = function(){
+  var showSortByList = function(){
+
     if( sortByClicked == true){
-      return false
+      return false // occassional double click being activated
     } else{
+    	console.log("test 2?")
         sortByClicked = true;
         var sortBy = document.getElementById("sortBy");    
         var infoCard = document.getElementById("info-card");    
         var sidebarViewsBlock = document.getElementById("sidebar-views");
-
         var sidebarLinks = document.querySelectorAll('.sidebar-posts-views .mdl-navigation__link');
 
-        sidebarViewsBlock.className = addClass( sidebarViewsBlock, "show-sort-by-list");
-        
         // errors with vanilla js slidedown implementation; temp jquery solution
+        sidebarViewsBlock.className = addClass( sidebarViewsBlock, "show-sort-by-list");
         $("#sidebar-views").slideDown(300); 
         // so so sloppy -- replace with vanilla js implementation later. Works for tonight's demo purposes
 
-        infoCard.className = addClass( infoCard, "animate-up")
+        infoCard.className = addClass( infoCard, "animate-up") // temp fix for infoCard to be in the perfect spot
 
         for ( var x=0; x < sidebarLinks.length; x++ ) {
+          //staggers each navigation link to animate opacity in
           var showLink = fadeInLink( x );
-          setTimeout( showLink, x * 150 );
+          setTimeout( showLink, x * 150 );  
         }
 
+        setTimeout( function() { 
+          sidebarViewsBlock.className = addClass( sidebarViewsBlock, "transition-complete");
+          sidebarViewsBlock.className = addClass( sidebarViewsBlock, "transition-complete");
+        }, sidebarLinks.length * 150)    //OKAY here is where it gets super messy; as it turns out when you click on a 
+                                         //fucking nav link it becomes active and then loses the previous opacity setting uughgggggh so after the whole staggered animations; set a seperate timeout to fire after ALL the staggering happens and then adds a completed class to the navigation parent; corresponds with custom.scss file.
+                                         //needs to be fixed but for now it is A-OK. I'd rather get this out sooner than later and refactor to perfection later. Sick of sitting on these things to be 'perfect'
+
         function fadeInLink( i ) {
+          //function/closure used above to properly stagger adding transition class at appropriate timeouts
           var link = sidebarLinks[i];
           return function() {
-            link.className = addClass( link, "fade-in");
+            link.className = addClass( link, "fade-in-transition");
           }
         }
 
@@ -91,7 +100,7 @@ const CustomHeader = (props, {currentUser}) => {
 			<nav className="sidebar-navigation mdl-navigation">
 				
 				<div className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" id="account"><i className="mdl-color-text--cyan-500 material-icons" role="presentation">account_box</i>Account</div>
-				<div className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" id="sortBy" onClick={sortByAnimation}><i className="mdl-color-text--cyan-500 material-icons" role="presentation">loop</i>Sort By: New</div>
+				<div className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" id="sortBy" onClick={showSortByList}><i className="mdl-color-text--cyan-500 material-icons" role="presentation">loop</i>Sort By: New</div>
 				
 				<Telescope.components.SidebarPostsViews />
 				

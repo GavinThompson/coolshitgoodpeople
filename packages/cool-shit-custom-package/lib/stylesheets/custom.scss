@@ -97,6 +97,7 @@ main .posts-list{
 }
 
 
+
 .sidebar-navigation .mdl-navigation__link {
   display: flex !important;
   flex-direction: row;
@@ -110,11 +111,14 @@ main .posts-list{
 }
 
 
-.sidebar-navigation .sidebar-posts-views.show-sort-by-list .mdl-navigation__link.fade-in{
+.sidebar-navigation .sidebar-posts-views.show-sort-by-list .mdl-navigation__link.fade-in-transition{
   opacity: 1;
   transition: opacity .3s ease-in-out;
   -moz-transition: opacity .3s ease-in-out;
   -webkit-transition: opacity .3s ease-in-out;
+}
+.sidebar-navigation .sidebar-posts-views.show-sort-by-list.transition-complete .mdl-navigation__link{
+  opacity: 1
 }
 
 .sidebar-navigation .mdl-navigation__link .material-icons{
