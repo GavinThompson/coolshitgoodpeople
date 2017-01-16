@@ -3,16 +3,41 @@
 import Telescope from 'meteor/nova:lib';
 import React from 'react';
 //import { Messages } from "meteor/nova:core";
+import { FormattedMessage } from 'react-intl';
+import { Meteor } from 'meteor/meteor';
+import { Accounts } from 'meteor/std:accounts-ui';
+import { LinkContainer } from 'react-router-bootstrap';
+
+import Users from 'meteor/nova:users';
+import { ModalTrigger } from "meteor/nova:core";
+
+
 
 const CustomHeader = (props, {currentUser}) => {
   
   const logoUrl = Telescope.settings.get("logoUrl");
   const siteTitle = Telescope.settings.get("title", "Cool Shit, Good People");
+  var sortByClicked = false;
 
-  var sortByClicked = false
+  var signInButton = <div className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" id="account"><i className="mdl-color-text--cyan-500 material-icons" role="presentation">lock</i>Sign In</div>;
+
+  var accountButton = function(){
+    if( currentUser ){
+      return (
+        <LinkContainer to={`/users/${currentUser.telescope.slug}`}>
+          <div className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" id="account"><i className="mdl-color-text--cyan-500 material-icons" role="presentation">account_box</i>Account</div>
+        </LinkContainer>
+      )
+    }else{
+      return (
+        <ModalTrigger size="small" title="Sign In / Sign Up" component={signInButton}>
+          <Telescope.components.UsersAccountForm />
+        </ModalTrigger>
+      )
+    }
+  }
 
   var showSortByList = function(){
-
     if( sortByClicked == true){
       return false // occassional double click being activated
     } else{
@@ -87,9 +112,7 @@ const CustomHeader = (props, {currentUser}) => {
 
 				<Telescope.components.SearchForm />
 
-
 				<Telescope.components.PostsNewButton/>
-
 
 			</div>
 		</header>
@@ -99,7 +122,8 @@ const CustomHeader = (props, {currentUser}) => {
 			</span>
 			<nav className="sidebar-navigation mdl-navigation">
 				
-				<div className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" id="account"><i className="mdl-color-text--cyan-500 material-icons" role="presentation">account_box</i>Account</div>
+				{accountButton()}
+
 				<div className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" id="sortBy" onClick={showSortByList}><i className="mdl-color-text--cyan-500 material-icons" role="presentation">loop</i>Sort By: New</div>
 				
 				<Telescope.components.SidebarPostsViews />
