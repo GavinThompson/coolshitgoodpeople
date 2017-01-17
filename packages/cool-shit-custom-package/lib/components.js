@@ -15,7 +15,6 @@ import CustomSearchForm from "./components/CustomSearchForm.jsx";
 import CustomSidebarPostsViews from "./components/CustomSidebarPostsViews.jsx";
 
 import CustomUsersAccountForm from "./components/CustomUsersAccountForm.jsx";
-import CustomNewsletter from "./components/CustomNewsletter.jsx";
 import CustomPostsListHeader from "./components/CustomPostsListHeader.jsx";
 
 
@@ -42,14 +41,10 @@ Telescope.components.SearchForm = CustomSearchForm;
 
 
 Telescope.components.UsersAccountForm = CustomUsersAccountForm;
-Telescope.components.Newsletter = CustomNewsletter;
 Telescope.components.PostsListHeader = CustomPostsListHeader;
 
 
-
-
 Telescope.components.PostsItem = CustomPostsItem;
-
 
 Telescope.components.Footer = CustomFooter;
 

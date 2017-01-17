@@ -39,7 +39,6 @@ class CustomLayout extends Component {
         <main className="mdl-layout__content">
           <FlashContainer component={Telescope.components.FlashMessages}/>
 
-          <Telescope.components.Newsletter />
           <div className="mdl-grid">
             {this.props.children}
           </div>
