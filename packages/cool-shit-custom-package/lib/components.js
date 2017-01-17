@@ -40,7 +40,7 @@ Telescope.components.SidebarPostsViews = CustomSidebarPostsViews;
 Telescope.components.SearchForm = CustomSearchForm;
 
 
-Telescope.components.UsersAccountForm = CustomUsersAccountForm;
+// Telescope.components.UsersAccountForm = CustomUsersAccountForm;
 Telescope.components.PostsListHeader = CustomPostsListHeader;
 
 
