@@ -54,9 +54,19 @@ class AccountsField extends Accounts.ui.Field {
   render() {
     const { id, hint, label, type = 'text', onChange, className = "field", defaultValue = "" } = this.props;
     const { mount = true } = this.state;
+
+    const textfieldWrapperClass = "mdl-textfield mdl-js-textfield mdl-textfield--floating-label";
+    const inputClass = "mdl-textfield__input";
+    const labelClass = "mdl-textfield__label";
+    const spanClass = "mdl-textfield__error";
+
     return mount ? (
-      <div className={ className }>
-        <FormControl id={ id } type={ type } onChange={ onChange } placeholder={ hint } defaultValue={ defaultValue } />
+      <div className={ textfieldWrapperClass }>
+
+        <FormControl id={ id } type={ type } onChange={ onChange } defaultValue={ defaultValue } bsClass={ inputClass } />
+        <label className={ labelClass } for="sample1">{ hint }</label>
+        <span className={ spanClass }>Input is not a number!</span>
+
       </div>
     ) : null;
   }
