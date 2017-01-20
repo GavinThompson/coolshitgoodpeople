@@ -291,6 +291,51 @@ svg.header text{
 	display:block;
 }
 
+.post-item a {
+  color: rgb(255,64,129);
+  /*transition*/
+  -webkit-transition: color .3s ease-in-out;
+  -moz-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out;
+}
+
+.post-item a:hover {
+  -webkit-animation: linkmagic 1.5s infinite !important;
+  -moz-animation: linkmagic 1.5s infinite !important;
+  -o-animation: linkmagic 1.5s infinite !important;
+  animation: linkmagic 1.5s infinite !important;
+}
+
+
+@-webkit-keyframes linkmagic {
+  0%, 100% { color: rgb(255,64,129); }
+  // 50%      { color: rgb(0,188,212); } //500 level cyan
+  50%      { color: #B2EBF2; }  //100 level cyan
+  
+
+}
+@-moz-keyframes linkmagic {
+  0%, 100% { color: rgb(255,64,129); }
+  // 50%      { color: rgb(0,188,212); } //500 level cyan
+  50%      { color: #B2EBF2; }  //100 level cyan
+  
+}
+@-o-keyframes linkmagic {
+  0%, 100% { color: rgb(255,64,129); }
+  // 50%      { color: rgb(0,188,212); } //500 level cyan
+  50%      { color: #B2EBF2; }  //100 level cyan
+  
+
+}
+@keyframes linkmagic {
+  0%, 100% { color: rgb(255,64,129); }
+  // 50%      { color: rgb(0,188,212); } //500 level cyan
+  50%      { color: #B2EBF2; }  //100 level cyan
+  
+
+}
+
 
 .posts-item-vote {
     vertical-align: top;
@@ -309,6 +354,15 @@ svg.header text{
     margin-top: 20px;
     margin-right: 32px;
 }
+
+.posts-item-vote .vote .vote-icon{
+    cursor: pointer;
+}
+
+.posts-item-vote .vote .vote-count{
+    color: rgb(255,64,129);
+}
+
 
 .posts-list .post-header{
 	vertical-align:top;

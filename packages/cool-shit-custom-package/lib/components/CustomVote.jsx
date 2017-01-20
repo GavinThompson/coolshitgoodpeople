@@ -10,11 +10,11 @@ class CustomVote extends Telescope.components.Vote {
     
     if( hasUpvoted ){
       heartIcon = (
-        <i className="fa fa-heart fa-2x"></i>
+        <i className="fa fa-heart fa-2x vote-icon"></i>
       )
     }else{
        heartIcon = (
-        <i className="fa fa-heart-o fa-2x"></i>
+        <i className="fa fa-heart-o fa-2x vote-icon"></i>
       )
     }
 
@@ -38,9 +38,9 @@ class CustomVote extends Telescope.components.Vote {
       <div className={actionsClass}>
         <a className="upvote-button" onClick={this.upvote}>
           { this.renderIcon( hasUpvoted ) }
-          <div className="sr-only">Upvote</div>
-          <div className="vote-count">{post.baseScore || 0}</div>
         </a>
+        <div className="sr-only">Upvote</div>
+        <div className="vote-count">{post.baseScore || 0}</div>
       </div>
     )
   }
