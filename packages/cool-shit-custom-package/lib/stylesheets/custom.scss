@@ -291,6 +291,25 @@ svg.header text{
 	display:block;
 }
 
+
+.posts-item-vote {
+    vertical-align: top;
+    display: table-cell;
+    padding: 26px 0px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 793px){
+    .posts-item-vote {
+        padding: 10px 0px;
+    }
+}
+
+.posts-item-vote .vote{
+    margin-top: 20px;
+    margin-right: 32px;
+}
+
 .posts-list .post-header{
 	vertical-align:top;
 	display:table-cell;
@@ -300,8 +319,6 @@ svg.header text{
 		display:none;
 	}
 }
-
-
 
 .post-header ._bubble{
 	width:72px;

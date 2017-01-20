@@ -53,6 +53,11 @@ class CustomPostsItem extends Telescope.components.PostsItem {
       <li className={postClass}>
 
         <div className="post-wrap -has-border -event-list -is-link">
+
+          <div className="posts-item-vote">
+            <Telescope.components.Vote post={post} />
+          </div>
+        
           <div className="post-header">
             <Link to={Posts.getLink(post)} target={Posts.getLinkTarget(post)}>
               <div className="_bubble mdl-shadow--4dp " style={inlineBubbleStyle}>
