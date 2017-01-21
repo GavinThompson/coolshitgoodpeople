@@ -45,11 +45,7 @@ class PostsItem extends Component {
 
     return (
       <div className={postClass}>
-        
-        <div className="posts-item-vote">
-          <Telescope.components.Vote post={post} />
-        </div>
-        
+                
         {post.thumbnailUrl ? <Telescope.components.PostsThumbnail post={post}/> : null}
 
         <div className="posts-item-content">

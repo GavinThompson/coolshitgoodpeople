@@ -523,6 +523,38 @@ svg.header text{
 }
 
 
+/**********************   VOTE EXPLOSION   **********************/
+// http://codepen.io/alek/pen/EyyLgp
+
+// explosion container
+.explosion {
+  position: absolute; // required if positioned on click else 'relative'
+  width: 100px;
+  height: 100px;
+  pointer-events: none; // make it clickable trhough
+  z-index: 1000;
+  // particle styling
+  .particle {
+    position: absolute; // required  
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    animation: pop 1s reverse forwards; // required
+  }
+}
+
+// animation for particle fly away from the cursor
+@keyframes pop {
+  from {
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+}
+
 /************************** MODAL FROM NOVA-BASE-STYLES Package ****************************************/
 // from bootstrap
 
