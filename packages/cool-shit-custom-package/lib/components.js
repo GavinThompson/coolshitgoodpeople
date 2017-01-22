@@ -26,7 +26,6 @@ import CustomUsersAccountForm from "./components/CustomUsersAccountForm.jsx";
 
 
 
-
 Telescope.components.LoadingOverlay = CustomLoadingOverlay;
 Telescope.components.AppLoading = CustomAppLoading;
 Telescope.components.Layout = CustomLayout;
@@ -46,6 +45,5 @@ Telescope.components.PostsList = CustomPostsList;
 Telescope.components.PostsItem = CustomPostsItem;
 Telescope.components.Vote = CustomVote;
 
+
 Telescope.components.Footer = CustomFooter;
-
-

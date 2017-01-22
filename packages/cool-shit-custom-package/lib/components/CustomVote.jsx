@@ -68,7 +68,7 @@ class CustomVote extends Telescope.components.Vote {
     const user = this.context.currentUser;
 
     if(!user){
-      this.context.messages.flash("Please log in first");
+      this.context.messages.flash("Please log in first :)");
       // RESTYLE FLASH MESSAGES
     } else if (user.hasUpvoted(post)) {
       this.context.actions.call('posts.cancelUpvote', post._id, () => {
