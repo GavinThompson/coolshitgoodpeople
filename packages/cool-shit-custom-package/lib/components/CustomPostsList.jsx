@@ -7,14 +7,12 @@ const PostsList = ({results, currentUser, hasMore, ready, count, totalCount, loa
     return (
       <div className="posts-list">
         {showHeader ? <Telescope.components.PostsListHeader /> : null}
-        <div className="mdl-cell mdl-cell--9-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
 
           <ol className="list-view">
             {results.map(post => <Telescope.components.PostsItem post={post} key={post._id}/>)}
           </ol>
           {hasMore ? (ready ? <Telescope.components.PostsLoadMore loadMore={loadMore} count={count} totalCount={totalCount} /> : <Telescope.components.PostsLoading/>) : <Telescope.components.PostsNoMore/>}
 
-        </div>
       </div>
     )
   } else if (!ready) {

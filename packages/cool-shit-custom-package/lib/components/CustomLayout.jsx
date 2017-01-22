@@ -40,7 +40,7 @@ class CustomLayout extends Component {
           <div className="header-buffer"></div>
           <FlashContainer component={Telescope.components.FlashMessages}/>
 
-          <div className="mdl-grid">
+          <div className="mdl-grid mdl-cell mdl-cell--9-col-desktop mdl-cell--8-col-tablet mdl-cell--4-col-phone">
             {this.props.children}
           </div>
         </main>
