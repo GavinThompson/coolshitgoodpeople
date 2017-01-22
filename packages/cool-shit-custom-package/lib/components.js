@@ -16,6 +16,7 @@ import CustomSidebarPostsViews from "./components/CustomSidebarPostsViews.jsx";
 
 import CustomPostsListHeader from "./components/CustomPostsListHeader.jsx";
 
+import CustomPostsList from "./components/CustomPostsList.jsx";
 import CustomPostsItem from "./components/CustomPostsItem.jsx";
 import CustomVote from "./components/CustomVote.jsx";
 
@@ -41,6 +42,7 @@ Telescope.components.SearchForm = CustomSearchForm;
 Telescope.components.PostsListHeader = CustomPostsListHeader;
 
 
+Telescope.components.PostsList = CustomPostsList;
 Telescope.components.PostsItem = CustomPostsItem;
 Telescope.components.Vote = CustomVote;
 

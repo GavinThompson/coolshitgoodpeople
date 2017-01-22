@@ -32,12 +32,24 @@ body, .sidebar-navigation a{
 
 /*********************************** NEW MDL OVERRIDES ************************************/
 
-main .mdl-grid{
+
+main.content{
 	background-color: rgb(250,250,250);
 }
 
+main.content .header-buffer{
+  height: 74px; // directly correspondts with the height of the header bar
+}
+
+@media screen and (max-width: 1024px){
+  main.content .header-buffer {
+    height: 66px; // directly correspondts with the height of the header bar
+ 
+  }
+}
+
 main .posts-list{
-	width: 100%;
+  width: 100%;
 }
 
 
@@ -223,22 +235,13 @@ svg.header text{
   font-size: 1.3em;
 }
 
+
 /************************** POSTS MAIN LIST ****************************************/
 
 .posts-list{
 	margin: 0 auto;
 }
 
-.posts-list .header-buffer{
-  height: 74px; // directly correspondts with the height of the header bar
-}
-
-@media screen and (max-width: 1024px){
-  .posts-list .header-buffer {
-    height: 66px; // directly correspondts with the height of the header bar
- 
-  }
-}
 .posts-list .mdl-cell{
 	margin: 0 auto;
 }

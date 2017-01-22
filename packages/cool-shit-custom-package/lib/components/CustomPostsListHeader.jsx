@@ -9,9 +9,7 @@ import Categories from "meteor/nova:categories";
 const PostsListHeader = () => {
 
   return (
-    <div>
-      <div className="header-buffer"></div>
-    </div>
+    <div className="categories"></div>
   )
 }
 
