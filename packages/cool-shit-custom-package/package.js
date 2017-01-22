@@ -21,7 +21,9 @@ Package.onUse( function(api) {
 
   api.addFiles([
     'lib/stylesheets/custom.scss',
-    'lib/stylesheets/bootstrap_spinner.scss'
+    'lib/stylesheets/bootstrap_spinner.scss',
+    'lib/stylesheets/bootstrap_basics.scss',
+    'lib/stylesheets/bootstrap_forms.scss'
   ], ['client']);
 
   api.addFiles([
