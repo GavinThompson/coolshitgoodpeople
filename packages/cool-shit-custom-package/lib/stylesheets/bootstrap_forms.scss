@@ -138,3 +138,8 @@ header .header-search .form-group.row{
 .modal-lg .modal-body form .col-sm-9{
   width: 60%;
 }
+
+.modal-lg .modal-body form .input-color,
+.modal-lg .modal-body form .input-categories{
+  display: none;
+}
