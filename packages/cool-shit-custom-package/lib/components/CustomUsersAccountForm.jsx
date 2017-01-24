@@ -26,8 +26,6 @@ class MDLAccountsButton extends Accounts.ui.Button {
   render () {
     const {label, href, type, disabled, className, onClick} = this.props;
     if (type === 'link') {
-      console.log("link!")
-      console.log(onClick)
       var classes = "registration-link"
       return <a href={ href } className={ classes } onClick={ onClick }>{ label }</a>;
     }
@@ -64,7 +62,7 @@ class AccountsField extends Accounts.ui.Field {
       <div className={ textfieldWrapperClass }>
 
         <FormControl id={ id } type={ type } onChange={ onChange } defaultValue={ defaultValue } bsClass={ inputClass } />
-        <label className={ labelClass } for="sample1">{ hint }</label>
+        <label className={ labelClass } htmlFor="sample1">{ hint }</label>
         <span className={ spanClass }>Input is not a number!</span>
 
       </div>

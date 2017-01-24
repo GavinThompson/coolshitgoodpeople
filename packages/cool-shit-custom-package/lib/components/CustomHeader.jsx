@@ -7,6 +7,8 @@ import { FormattedMessage } from 'react-intl';
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/std:accounts-ui';
 import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router';
+
 
 import Users from 'meteor/nova:users';
 import { ModalTrigger } from "meteor/nova:core";
@@ -30,19 +32,13 @@ const CustomHeader = (props, {currentUser}) => {
           </div>
 
           <ul className="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" htmlFor="accountButton">
-            <LinkContainer to={`/users/${user.telescope.slug}`}>
-              <li className="mdl-menu__item">
-                <Telescope.components.UsersAvatar size="small" user={currentUser} link={false} />  <FormattedMessage id="users.profile"/>
-              </li>
-            </LinkContainer>
-            <LinkContainer to={`/account`}>
-              <li className="mdl-menu__item mdl-menu__item--full-bleed-divider">
-                <i className="mdl-color-text--cyan-500 material-icons" role="presentation">settings_applications</i> <FormattedMessage id="users.edit_account"/>
-              </li>
-            </LinkContainer>
-            <li className="mdl-menu__item" onClick={() => Meteor.logout(Accounts.ui._options.onSignedOutHook())}>
-              <i className="mdl-color-text--cyan-500 material-icons" role="presentation">power_settings_new</i> <FormattedMessage id="users.log_out"/>
-            </li>
+            <Link to={`/users/${user.telescope.slug}`}>
+                <Telescope.components.AccountMenuItem menuOption={"profile"} user={user} />
+            </Link>
+            <Link to={`/account`}>
+                <Telescope.components.AccountMenuItem menuOption={"edit"} user={user} />
+            </Link>
+            <Telescope.components.AccountMenuItem menuOption={"logOut"} user={user} />
           </ul>
         </div>
       )

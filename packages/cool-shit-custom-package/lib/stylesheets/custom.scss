@@ -25,7 +25,7 @@
 @font-face { font-family: HighTideSans; src: url('/fonts/hightide/HighTideSans.otf'); } 
 @font-face { font-family: HighTideBold; src: url('/fonts/hightide/HighTideBold.otf'); } 
 
-body, .sidebar-navigation a{
+body, .sidebar-navigation a, li.mdl-menu__item {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 
@@ -172,8 +172,16 @@ main .users-profile{
 }
 
 // PROFILE MENU
+.sidebar-navigation .mdl-menu a{
+  text-decoration: none;
+}
+
 .sidebar-navigation .mdl-menu__container{
   background-color: rgb(224, 247, 250);
+}
+
+.sidebar-navigation .mdl-menu .mdl-menu__item{
+  color: #757575;
 }
 
 .sidebar-navigation .mdl-menu .mdl-menu__item .material-icons{
