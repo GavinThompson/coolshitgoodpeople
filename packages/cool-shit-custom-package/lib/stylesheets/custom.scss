@@ -171,6 +171,24 @@ main .users-profile{
   margin-right: 32px;
 }
 
+// PROFILE MENU
+.sidebar-navigation .mdl-menu__container{
+  background-color: rgb(224, 247, 250);
+}
+
+.sidebar-navigation .mdl-menu .mdl-menu__item .material-icons{
+  vertical-align: middle;
+}
+
+.sidebar-navigation .mdl-menu .mdl-menu__item img.avatar{
+  border-radius: 4px !important;
+  display: inline !important;
+  height: 16px !important;
+  width: 16px !important;
+  border: 2px solid rgb(0,188,212) !important;
+  margin: -5px 2px -2px 2px !important;
+}
+
 // search and new post button
 .mdl-layout__header .header-search{
 	right: 80px;
@@ -186,6 +204,8 @@ main .users-profile{
 	top: 36px;
 	z-index: 999;
 }
+
+//INFO CARD
 
 .sidebar-navigation .sidebar-card.mdl-card{
 	position: relative; //using this for animation transitions

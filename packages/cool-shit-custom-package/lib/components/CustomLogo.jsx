@@ -9,7 +9,9 @@ import { IndexLink } from 'react-router';
 
 const CustomLogo = ({logoUrl, siteTitle}) => {
   return (
-    <div id="logo">
+	<div id="logo">
+		<IndexLink to={{pathname: "/"}}>
+
 			<svg 
 				className="header" 
 				xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +74,9 @@ const CustomLogo = ({logoUrl, siteTitle}) => {
 					</linearGradient>
 				</defs>
 			</svg>
-		</div>
+			
+		</IndexLink>
+	</div>
   )
 }
 

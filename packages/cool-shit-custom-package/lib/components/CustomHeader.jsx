@@ -19,14 +19,32 @@ const CustomHeader = (props, {currentUser}) => {
   const siteTitle = Telescope.settings.get("title", "Cool Shit, Good People");
   var sortByClicked = false;
 
-  var signInButton = <div className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" id="account"><i className="mdl-color-text--cyan-500 material-icons" role="presentation">lock</i>Sign In</div>;
+  var signInButton = <div className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" id="signInButton"><i className="mdl-color-text--cyan-500 material-icons" role="presentation">lock</i>Sign In</div>;
 
-  var accountButton = function(){
-    if( currentUser ){
+  var accountButton = function( user ){
+    if( user ){
       return (
-        <LinkContainer to={`/users/${currentUser.telescope.slug}`}>
-          <div className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" id="account"><i className="mdl-color-text--cyan-500 material-icons" role="presentation">account_box</i>Account</div>
-        </LinkContainer>
+        <div>
+          <div className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" id="accountButton">
+            <i className="mdl-color-text--cyan-500 material-icons" role="presentation">more_vert</i>  {Users.getDisplayName(currentUser)} 
+          </div>
+
+          <ul className="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" htmlFor="accountButton">
+            <LinkContainer to={`/users/${user.telescope.slug}`}>
+              <li className="mdl-menu__item">
+                <Telescope.components.UsersAvatar size="small" user={currentUser} link={false} />  <FormattedMessage id="users.profile"/>
+              </li>
+            </LinkContainer>
+            <LinkContainer to={`/account`}>
+              <li className="mdl-menu__item mdl-menu__item--full-bleed-divider">
+                <i className="mdl-color-text--cyan-500 material-icons" role="presentation">settings_applications</i> <FormattedMessage id="users.edit_account"/>
+              </li>
+            </LinkContainer>
+            <li className="mdl-menu__item" onClick={() => Meteor.logout(Accounts.ui._options.onSignedOutHook())}>
+              <i className="mdl-color-text--cyan-500 material-icons" role="presentation">power_settings_new</i> <FormattedMessage id="users.log_out"/>
+            </li>
+          </ul>
+        </div>
       )
     }else{
       return (
@@ -108,10 +126,9 @@ const CustomHeader = (props, {currentUser}) => {
 
 		<header className="mdl-layout__header">
 			<div className="mdl-layout__header-row">
+
 				<div className="mdl-layout-spacer"></div>
-
 				<Telescope.components.SearchForm />
-
 				<Telescope.components.PostsNewButton/>
 
 			</div>
@@ -122,9 +139,9 @@ const CustomHeader = (props, {currentUser}) => {
 			</span>
 			<nav className="sidebar-navigation mdl-navigation">
 				
-				{accountButton()}
+				{accountButton( currentUser )}
 
-				<div className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" id="sortBy" onClick={showSortByList}><i className="mdl-color-text--cyan-500 material-icons" role="presentation">loop</i>Sort By: New</div>
+				<div className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect" id="sortBy" onClick={showSortByList}><i className="mdl-color-text--cyan-500 material-icons" role="presentation">arrow_drop_down_circle</i>Sort By: New</div>
 				
 				<Telescope.components.SidebarPostsViews />
 				
