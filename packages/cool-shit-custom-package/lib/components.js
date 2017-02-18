@@ -24,6 +24,7 @@ import CustomPostsLoadMore from "./components/CustomPostsLoadMore.jsx";
 
 import CustomFooter from "./components/CustomFooter.jsx";
 
+import CustomPostsRandom from "./components/CustomPostsRandom.jsx";
 import CustomUsersAccountForm from "./components/CustomUsersAccountForm.jsx";
 
 
@@ -51,3 +52,5 @@ Telescope.components.PostsLoadMore = CustomPostsLoadMore;
 
 
 Telescope.components.Footer = CustomFooter;
+
+Telescope.components.PostsRandom = CustomPostsRandom;

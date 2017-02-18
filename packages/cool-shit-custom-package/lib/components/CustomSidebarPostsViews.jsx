@@ -43,6 +43,12 @@ const CustomSidebarPostsViews = (props, context) => {
           </Button>
         </LinkContainer>
 
+        <LinkContainer to={"/random"} /*to={{name: "posts.daily"}}*/>
+          <Button className="mdl-navigation__link mdl-js-button mdl-js-ripple-effect">
+            <i className="mdl-color-text--cyan-500 material-icons" role="presentation">alarm</i> Random
+          </Button>
+        </LinkContainer>
+
     </div>
   )
 }
