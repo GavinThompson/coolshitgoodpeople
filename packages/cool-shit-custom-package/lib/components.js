@@ -13,6 +13,8 @@ import CustomLogo from "./components/CustomLogo.jsx";
 import CustomAccountMenuItem from "./components/CustomAccountMenuItem.jsx";
 import CustomPostsNewButton from "./components/CustomPostsNewButton.jsx";
 import CustomSearchForm from "./components/CustomSearchForm.jsx";
+
+import CustomSidebarPostsAdmin from "./components/CustomSidebarPostsAdmin.jsx";
 import CustomSidebarPostsViews from "./components/CustomSidebarPostsViews.jsx";
 
 import CustomPostsListHeader from "./components/CustomPostsListHeader.jsx";
@@ -38,6 +40,8 @@ Telescope.components.Header = CustomHeader;
 Telescope.components.Logo = CustomLogo;
 Telescope.components.AccountMenuItem = CustomAccountMenuItem;
 Telescope.components.PostsNewButton = CustomPostsNewButton;
+
+Telescope.components.SidebarPostsAdmin = CustomSidebarPostsAdmin;
 Telescope.components.SidebarPostsViews = CustomSidebarPostsViews;
 Telescope.components.SearchForm = CustomSearchForm;
 
