@@ -14,11 +14,9 @@ class CustomLayout extends Component {
   }
 
   componentDidMount() {
-    //
-    // set el height and width etc.
+   
       {this.setState({ initLoading: false })}
 
-    
   }
 
 

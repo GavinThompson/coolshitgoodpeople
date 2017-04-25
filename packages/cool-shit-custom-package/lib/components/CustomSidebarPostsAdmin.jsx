@@ -6,8 +6,6 @@ import { withRouter } from 'react-router'
 import Users from 'meteor/nova:users';
 
 const CustomSidebarPostsAdmin = (props, context) => {
-
-  console.log("custom sidebar admin")
   
   let viewByClicked = false;
   let currentUserAdmin = false;
@@ -17,6 +15,8 @@ const CustomSidebarPostsAdmin = (props, context) => {
 
 
   var showViewByList = function(){
+
+
     if( viewByClicked == true){
       return false // occassional double click being activated
     } else{
@@ -88,7 +88,6 @@ const CustomSidebarPostsAdmin = (props, context) => {
       </div>
     )
   }else{
-    console.log("NO ADMIN")
     return(
       <div>
         <div className="collapse"></div>
