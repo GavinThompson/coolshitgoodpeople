@@ -34,7 +34,11 @@ const servePostRSS = function (terms, url) {
       author: post.author,
       date: post.postedAt,
       guid: post._id,
-      url: (Telescope.settings.get("RSSLinksPointTo", "link") === "link") ? Posts.getLink(post) : Posts.getPageUrl(post, true)
+      // url: (Telescope.settings.get("RSSLinksPointTo", "link") === "link") ? Posts.getLink(post) : Posts.getPageUrl(post, true)
+      // making a quick change -- may re-evaluate this 
+      // going forward but currently changing so custom facebook extension
+      // doesn't show pulse domain to outgoing links
+      url: post.url
     };
 
     if (post.thumbnailUrl) {
