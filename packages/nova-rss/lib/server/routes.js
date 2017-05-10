@@ -26,3 +26,9 @@ Picker.route('/rss/category/:slug/feed.xml', function(params, req, res, next) {
 Picker.route('/rss/comments.xml', function(params, req, res, next) {
   res.end(serveCommentRSS({}, '/rss/comments.xml'));
 });
+
+// ADDED CUSTOM FOR COOL SHIT GOOD PEOPLE
+
+Picker.route('/rss/posts/clicks.xml', function(params, req, res, next) {
+  res.end(servePostRSS({view: 'clickCount'}, '/rss/posts/clickCount.xml'));
+});

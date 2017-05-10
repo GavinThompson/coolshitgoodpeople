@@ -145,3 +145,15 @@ Posts.views.add("test", function (terms) {
     options: {sort: {sticky: -1, baseScore: -1}}
   };
 });
+
+
+/**
+*ADDED CUSTOM VIEWS BY HAND for cool shit -- should probably extract to seperate package
+**/
+
+Posts.views.add("clickCount", function (terms) {
+  return {
+    ...Posts.views.baseParameters,
+    options: {sort: {sticky: -1, clickCount: -1}}
+  };
+});
