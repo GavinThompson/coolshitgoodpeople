@@ -151,9 +151,29 @@ Posts.views.add("test", function (terms) {
 *ADDED CUSTOM VIEWS BY HAND for cool shit -- should probably extract to seperate package
 **/
 
-Posts.views.add("clickCount", function (terms) {
+Posts.views.add("clicks", function (terms) {
   return {
     ...Posts.views.baseParameters,
     options: {sort: {sticky: -1, clickCount: -1}}
+  };
+});
+
+
+
+Posts.views.add("newsletters", function (terms) {
+  return {
+    selector: {
+      title: {$regex: "newsletter", $options: 'i'}
+    },
+    options: {sort: {createdAt: -1}}
+  };
+});
+
+
+Posts.views.add("random", function (terms) {
+
+  return {
+    ...Posts.views.baseParameters,
+    options: {limit: 10, sort: {sticky: -1}}
   };
 });

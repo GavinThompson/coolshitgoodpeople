@@ -70,4 +70,49 @@ const serveCommentRSS = function (terms, url) {
   return feed.xml();
 };
 
-export {servePostRSS, serveCommentRSS};
+
+
+const serveRandomPostRSS = function (terms, url) {
+  var feed = new RSS(getMeta(url));
+
+  console.log("**************** LETS DO THIS *************")
+  console.log( terms )
+
+  var parameters = Posts.parameters.get(terms);
+  delete parameters['options']['sort']['sticky'];
+
+  // const postsCursor = Posts.find(parameters.selector, parameters.options)
+  const randPostsCursor = _.sample( Posts.find(parameters.selector, parameters.options).fetch(), 10 );
+
+  // console.log( postsCursor )
+  // console.log( randPostsCursor );
+
+  randPostsCursor.forEach(function(post) {
+    console.log( post )
+
+    var description = !!post.body ? post.body+'</br></br>' : '';
+    var feedItem = {
+      title: post.title,
+      description: description + '<a href="' + post.getPageUrl(true) + '">Discuss</a>',
+      author: post.author,
+      date: post.postedAt,
+      guid: post._id,
+      // url: (Telescope.settings.get("RSSLinksPointTo", "link") === "link") ? Posts.getLink(post) : Posts.getPageUrl(post, true)
+      // making a quick change -- may re-evaluate this 
+      // going forward but currently changing so custom facebook extension
+      // doesn't show pulse domain to outgoing links
+      url: post.url
+    };
+
+    if (post.thumbnailUrl) {
+      var url = Telescope.utils.addHttp(post.thumbnailUrl);
+      feedItem.custom_elements = [{"imageUrl":url}, {"content": url}];
+    }
+
+    feed.item(feedItem);
+  });
+
+  return feed.xml();
+};
+
+export {servePostRSS, serveCommentRSS, serveRandomPostRSS};

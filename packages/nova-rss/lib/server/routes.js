@@ -1,4 +1,4 @@
-import { servePostRSS, serveCommentRSS } from './rss.js';
+import { servePostRSS, serveCommentRSS, serveRandomPostRSS } from './rss.js';
 
 Picker.route('/feed.xml', function(params, req, res, next) {
   if (typeof params.query.view === "undefined") {
@@ -30,5 +30,13 @@ Picker.route('/rss/comments.xml', function(params, req, res, next) {
 // ADDED CUSTOM FOR COOL SHIT GOOD PEOPLE
 
 Picker.route('/rss/posts/clicks.xml', function(params, req, res, next) {
-  res.end(servePostRSS({view: 'clickCount'}, '/rss/posts/clickCount.xml'));
+  res.end(servePostRSS({view: 'clicks'}, '/rss/posts/clicks.xml'));
+});
+
+Picker.route('/rss/posts/newsletter.xml', function(params, req, res, next) {
+  res.end(servePostRSS({view: 'newsletter'}, '/rss/posts/newsletter.xml'));
+});
+
+Picker.route('/rss/posts/random.xml', function(params, req, res, next) {
+  res.end(serveRandomPostRSS({view: 'random'}, '/rss/posts/random.xml'));
 });
