@@ -75,8 +75,8 @@ const serveCommentRSS = function (terms, url) {
 const serveRandomPostRSS = function (terms, url) {
   var feed = new RSS(getMeta(url));
 
-  console.log("**************** LETS DO THIS *************")
-  console.log( terms )
+  // console.log("**************** LETS DO THIS *************")
+  // console.log( terms )
 
   var parameters = Posts.parameters.get(terms);
   delete parameters['options']['sort']['sticky'];
@@ -88,7 +88,7 @@ const serveRandomPostRSS = function (terms, url) {
   // console.log( randPostsCursor );
 
   randPostsCursor.forEach(function(post) {
-    console.log( post )
+    // console.log( post )
 
     var description = !!post.body ? post.body+'</br></br>' : '';
     var feedItem = {

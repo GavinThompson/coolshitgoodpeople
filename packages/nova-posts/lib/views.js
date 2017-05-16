@@ -172,8 +172,17 @@ Posts.views.add("newsletters", function (terms) {
 
 Posts.views.add("random", function (terms) {
 
+  var randPosts = _.sample( Posts.find().fetch(), 20 );
+  // console.log (randPosts )
+
+  var postsIds = _.pluck(randPosts, "_id");
+  // console.log(postsIds)
+
   return {
-    ...Posts.views.baseParameters,
+    selector: {_id: {$in: postsIds},
+      status: Posts.config.STATUS_APPROVED,
+      isFuture: {$ne: true} // match both false and undefined
+    },
     options: {limit: 10, sort: {sticky: -1}}
   };
 });
